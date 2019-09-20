@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+
+<!--
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+This webpage is a copy of index.html
+with only one thing changed which is
+the text at the bottom of the page, this
+is done to confuse people, this webpage is
+only reachable through the link at the top
+of images-iframes.html
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+-->
+
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <h1>Random Lists of Things</h1>
+
+    <br />
+    <p>This website has different lists of random things, inputs and other random things I think of.</p>
+    <br />
+
+    <h3>Wierd Animals</h3>
+    <table width="900" height="500">
+        <tr>
+            <th>Name</th>
+            <th>Colour</th>
+            <th>Why its wierd</th>
+            <th>Picture</th>
+        </tr>
+        <tr>
+            <td>Water Bear or Tardigrade</td>
+            <td>Transparent, white, red, orange, yellow green, purple and black</td>
+            <td>They can survive extrmeme cold/heat, radiation and the vacuum of space</td>
+            <td><img src="images/waterbear.jpg" alt="Picture of a Water Bear" width="180" height="140" /></td>
+        </tr>
+        <tr>
+            <td>Giraffe</td>
+            <td>Dark brown and orange</td>
+            <td>Try telling someone who has never seen a giraffe that there is a horse like creature with a 6 foot long neck</td>
+            <td><img src="images/giraffe.jpg" alt="Picture of a Giraffe" width="130" height="180" /></td>
+        </tr>
+        <tr>
+            <td>Humans</td>
+            <td>I'm going to stay safe and not put anything here</td>
+            <td>Humans are the most intellegent animal on Earth and are far beyond all other animals. Why are humans so much smarter?</td>
+            <td><img src="images/Human.jpg" alt="A picture of a human" width="155" height="170" /> </td>
+        </tr>
+    </table>
+
+    <br />
+    <h3>Random Questions</h3>
+    <!--The start of a form which uses the "get" method-->
+    <form method="get">
+
+        <!--This is a input and label for time, it is a textbox and inside the textbox is a placeholder that says "Time" and the user
+        is only able to type 5 characters.-->
+        <label for="time"><b>Time:</b></label>
+        <input type="text" name="time" placeholder="Time" size="5" maxlength="5" id="time" />
+
+        <!--This is a drop down menu that has 9 different options for the user to select. -->
+        <p><b>Select an option</b></p>
+        <select name="yesorno" id="yesno">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            <option value="maybe">Maybe</option>
+            <option value="idontknow">I don't know</option>
+            <option value="simulation">Do we live in a simulation</option>
+            <option value="alienlanguage">Would intelligent aliens have language</option>
+            <option value="fasterlightspeed">I think future humans will break light speed</option>
+            <option value="slowerlightspeed">I don't think future humans will ever break light speed</option>
+            <option value="thisisnew">This option has not been seen before</option>
+        </select>
+
+        <br />
+        <!--This uses buttons to choose an option, all of the options are blank at the start but when the user clicks on one the options,
+        that option they clicked on gets filled in. But two options can't be filled in at the same time the most recently clicked option
+        is going to be selected. -->
+        <p><b>Are you Confused Yet</b></p>
+        <label><input type="radio" name="confused" value="yes">Yes</label>
+        <label><input type="radio" name="confused" value="no">No</label>
+        <label><input type="radio" name="confused" value="almost">Almost</label>
+        <label><input type="radio" name="confused" value="whatisconfused">What is Confusion</label>
+        <label><input type="radio" name="confused" value="lightdeath">Can Light Die</label>
+        <label><input type="radio" name="confused" value="time">Did Time Exist Before the Universe</label>
+        <label><input type="radio" name="confused" value="hiddingspot">You Have Never Found the best Hiding Spot</label>
+        <label><input type="radio" name="confused" value="endofuniverse">What is at the end of the Universe</label>
+
+        <br />
+        <br />
+        <!--This input type is used for putting in a day, month and year-->
+        <label for="date">Pick a date you think no-one else has picked</label>
+        <input type="date" id="date" name="date" value="2019-9-17" min="1977-1-1" max="2225-1-1">
+
+        <br />
+        <!--Lastly is the submit button, when this button is pressed all of the things wrote or options selected are submited, you
+        can see this wrk because the URL will change-->
+        <input type="submit" value="Submit" />
+    </form>
+
+    <br />
+    <br />
+
+    <h3>Top 10 First Numbers</h3>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+
+    <br />
+    <h3>Write one of your favorite numbers that is between 1-10</h3>
+    <input id="txt" placeholder="Number from 1-10" size="20" maxlength="2">
+    <br />
+    <button onclick="window.location.href='images-iframes.html' " id="1to10">Click Me</button>
+    <br />
+    <p><b><u>So you came back to check the text didn't you. Now are you confused?</u></b></p>
+
+    <!--The opening of javascript-->
+    <script type="text/javascript">
+        //The setInterval is used to make the checkForNumbers function keep on running
+        setInterval(checkForNumbers, 200);
+
+        /*The checkForNumbers function gets both the button with id "1to10" and the textbox with id "txt" then it checks to see if the
+        textbox has a number from 1 to 10 written inside of it, if it does it enables the button if it doesn't it disables the button*/
+        function checkForNumbers()
+        {
+            var text = document.getElementById("txt").value;
+            var btn = document.getElementById("1to10");
+
+            if (text.includes("1") || text.includes("2") || text.includes("3") || text.includes("4") || text.includes("5") || text.includes("6") || text.includes("7") || text.includes("8") || text.includes("9") || text.includes("10"))
+            {
+                btn.disabled = false;
+            }
+            else
+            {
+                btn.disabled = true;
+            }
+
+        }
+
+    </script>
+</body>
+</html>
